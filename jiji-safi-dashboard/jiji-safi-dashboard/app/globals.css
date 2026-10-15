@@ -1,0 +1,191 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 220 20% 12%;
+    --primary: 152 76% 36%;
+    --primary-foreground: 0 0% 100%;
+    --muted: 210 20% 94%;
+    --muted-foreground: 220 10% 46%;
+    --border: 214 20% 88%;
+  }
+
+  body {
+    @apply bg-slate-950 text-slate-100 min-h-screen antialiased selection:bg-emerald-500/30 selection:text-emerald-200;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+}
+
+/* ========================================================================= */
+/* LIGHT MODE DESIGN SYSTEM                                                  */
+/* ========================================================================= */
+
+html.light body {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+html.light header,
+html.light aside {
+  background-color: rgba(255, 255, 255, 0.98) !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+}
+
+html.light .bg-slate-950 {
+  background-color: #ffffff !important;
+}
+
+html.light .bg-slate-950\/60,
+html.light .bg-slate-950\/70,
+html.light .bg-slate-950\/80,
+html.light .bg-slate-950\/85,
+html.light .bg-slate-950\/95 {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+}
+
+html.light .bg-slate-900,
+html.light .bg-slate-900\/60,
+html.light .bg-slate-900\/70,
+html.light .bg-slate-900\/80 {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.04);
+}
+
+html.light .bg-slate-800,
+html.light .bg-slate-800\/40,
+html.light .bg-slate-800\/60 {
+  background-color: #f1f5f9 !important;
+  color: #1e293b !important;
+  border-color: #cbd5e1 !important;
+}
+
+html.light .border-slate-800,
+html.light .border-slate-800\/80,
+html.light .border-slate-700,
+html.light .border-slate-700\/60 {
+  border-color: #e2e8f0 !important;
+}
+
+/* Typography in Light Mode */
+html.light .text-white {
+  color: #0f172a !important;
+}
+
+html.light .text-slate-100,
+html.light .text-slate-200 {
+  color: #1e293b !important;
+}
+
+html.light .text-slate-300 {
+  color: #334155 !important;
+}
+
+html.light .text-slate-400 {
+  color: #64748b !important;
+}
+
+html.light .text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+html.light select,
+html.light input {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+html.light .divide-slate-800\/80 > :not([hidden]) ~ :not([hidden]) {
+  border-color: #f1f5f9 !important;
+}
+
+/* ------------------------------------------------------------------------- */
+/* CARD GRADIENT LIGHT MODE OVERRIDES (No dark gradients on light mode)       */
+/* ------------------------------------------------------------------------- */
+
+/* AI Analyst Copilot Card in Light Mode */
+html.light .from-emerald-950\/40,
+html.light .from-emerald-950\/30 {
+  background-image: linear-gradient(to right, #ecfdf5, #f0fdf4, #ffffff) !important;
+  background-color: #ecfdf5 !important;
+  border-color: #a7f3d0 !important;
+}
+
+/* Sector of the Month & Vendor Champion Cards */
+html.light .from-amber-500\/15 {
+  background-image: linear-gradient(to bottom right, #fffbeb, #ffffff) !important;
+  background-color: #ffffff !important;
+  border-color: #fde68a !important;
+}
+
+html.light .from-emerald-500\/15 {
+  background-image: linear-gradient(to bottom right, #ecfdf5, #ffffff) !important;
+  background-color: #ffffff !important;
+  border-color: #a7f3d0 !important;
+}
+
+/* StatCard variant light mode backgrounds */
+html.light .bg-emerald-950\/20 {
+  background-color: #ecfdf5 !important;
+  border-color: #a7f3d0 !important;
+  color: #065f46 !important;
+}
+html.light .bg-amber-950\/20 {
+  background-color: #fffbeb !important;
+  border-color: #fde68a !important;
+  color: #92400e !important;
+}
+html.light .bg-rose-950\/20 {
+  background-color: #fff1f2 !important;
+  border-color: #fecdd3 !important;
+  color: #9f1239 !important;
+}
+html.light .bg-sky-950\/20 {
+  background-color: #f0f9ff !important;
+  border-color: #bae6fd !important;
+  color: #075985 !important;
+}
+
+/* Leaflet map styles container */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.75rem;
+  z-index: 10;
+  background-color: #e2e8f0 !important;
+}
+
+.leaflet-popup-content-wrapper {
+  background: #1e293b !important;
+  color: #f8fafc !important;
+  border-radius: 0.5rem !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5) !important;
+  border: 1px solid #334155 !important;
+}
+
+.leaflet-popup-tip {
+  background: #1e293b !important;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
