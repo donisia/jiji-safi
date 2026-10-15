@@ -1,4 +1,22 @@
-jiji-safi-bot (7)/jiji-safi-bot/env.txt
-jiji-safi-bot (7)/jiji-safi-bot/.env
-*.env
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+.env
+.env.*
+!.env.example
+!.env.local.example
 env.txt
+__pycache__/
+*.pyc
+venv/
+.venv/
+reports.json
+pending_apex.json
+*.db
+*.sqlite*
+.DS_Store
+Thumbs.db
+*.zip
+*.bak
